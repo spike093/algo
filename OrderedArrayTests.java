@@ -1,10 +1,12 @@
-package orderedArray;
+package orderedarray;
+
 import java.util.Comparator;
-import static org.junit.Asssert.assertArrayEquals;
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import org.junit.test;
+import org.junit.Test;
+import org.junit.Before;
 
 /**
  * @author: Tessa Alessandro
@@ -28,15 +30,15 @@ public class OrderedArrayTests{
 		i1 = -12;
 		i2 = 0;
 		i3 = 4;
-		orderedArray = new OrderedArray<>(new IntegerComparator());
+		orderedArray = new OrderedArray<Integer>(new IntegerComparator());
 	}
 
-	@test
+	@Test
 	public void testIsEmpty_zeroEl(){
 		assertTrue(orderedArray.isEmpty());
 	}
 
-	@test
+	@Test
 	public void testIsEmpty_oneEl() throws Exception{
 		orderedArray.add(i1);
 		assertFalse(orderedArray.isEmpty());

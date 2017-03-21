@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 /**
  *  @author Tessa Alessandro
- *  @param <T>: type of the ordered array elements
+ *  @param T: type of the ordered array elements
  *
  **/
 
@@ -16,20 +16,20 @@ public class OrderedArray<T> {
 	/**
 	 *  It creates an empty ordered array and returns
 	 *  the created array.
-	 *  It accepts as imput a comparator imprelenting the precedence
+	 *  It accepts as imput a comparator implementing the precedence
 	 *  relation between array elements.
 	 *  @param comparator: a comparator implementing the 
 	 *  precedence relation between the array elements.
 	 **/
-	public void orderedArray(Comparator<? super T> comparator){
+	public OrderedArray(Comparator<? super T> comparator){
 		this.array = new ArrayList<>();
 		this.comparator = comparator;
 	} //orderedArray
 
 	/**
-	 *  @return: true if and only in this ordered array is empty
+	 *  @return: true if and only if this ordered array is empty
 	 **/
-	public boolean iempty(){
+	public boolean isEmpty(){
 		return (this.array).isEmpty();
 	}//isEmpty
 
